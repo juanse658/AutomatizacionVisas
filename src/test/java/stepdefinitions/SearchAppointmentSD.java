@@ -50,8 +50,9 @@ public class SearchAppointmentSD {
 
         theActorInTheSpotlight().attemptsTo(
 
-                GoToCalendar.go(),
-                SelectTheAppointments.select());
+                GoToCalendar.go()
+
+        );
     }
 
 

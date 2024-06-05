@@ -17,4 +17,11 @@ public class AppointmentsAvailabilityPage {
     // Otros botones
     public static final Target BTN_CERRAR = Target.the("Boton Cerrar").locatedBy("//*[@class='button secondary']");
     public static final Target BTN_REPROGRAMAR = Target.the("Boton Reprogramar").locatedBy("//*[@class='action input_action ']");
+
+    // Logout
+
+    public static final Target BTN_ACCIONES = Target.the("Boton Acciones").locatedBy("(//*[@class='is-dropdown-submenu-parent opens-left'])[2]");
+    public static final Target BTN_FINALIZAR_SESION = Target.the("Boton Finalizar Sesion").locatedBy("(//a[@href='/es-co/niv/users/sign_out'])[2]");
+    public static final Target BTN_INICIAR_SESION = Target.the("Boton Iniciar Sesion").locatedBy("//*[@id='header']/nav/div/div/div[2]/div[1]/ul/li[3]/a");
+
 }
