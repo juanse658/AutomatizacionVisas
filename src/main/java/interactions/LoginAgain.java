@@ -5,9 +5,13 @@ import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.actions.Open;
+import net.serenitybdd.screenplay.waits.Wait;
+import tasks.WaitTask;
 import userinterfaces.AppointmentsAvailabilityPage;
 import userinterfaces.LoginPage;
+
+import java.time.Duration;
+
 
 public class LoginAgain implements Interaction {
 

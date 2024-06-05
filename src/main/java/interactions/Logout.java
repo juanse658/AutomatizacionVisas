@@ -5,6 +5,7 @@ import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import tasks.Login;
+import tasks.WaitTask;
 import userinterfaces.AppointmentsAvailabilityPage;
 
 public class Logout implements Interaction {

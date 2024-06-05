@@ -8,13 +8,6 @@ import userinterfaces.AppointmentsAvailabilityPage;
 
 public class GeneralFlow implements Interaction {
 
-    private boolean isConsularCalendar;
-    private boolean isConsularDate;
-
-    public GeneralFlow() {
-        this.isConsularCalendar = SelectConsularCalendar.isCalendar;
-        this.isConsularDate = SelectConsularDate.isDate;
-    }
 
 
     @Override
@@ -22,7 +15,7 @@ public class GeneralFlow implements Interaction {
 
         //Click en el primer calendario en caso que no se pueda dar click hacer Logout
         actor.attemptsTo(SelectConsularCalendar.select());
-        if (!isConsularCalendar) {
+        if (!SelectConsularCalendar.isCalendar) {
             actor.attemptsTo(
                     Logout.logout()
             );
@@ -30,7 +23,7 @@ public class GeneralFlow implements Interaction {
 
         //buscar en los primeros meses una cita disponible en caso que no haya hacer logout
         actor.attemptsTo(SelectConsularDate.select());
-        if (!isConsularDate) {
+        if (!SelectConsularDate.isDate) {
             actor.attemptsTo(
                     Logout.logout()
             );

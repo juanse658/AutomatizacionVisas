@@ -8,8 +8,11 @@ import userinterfaces.AppointmentsAvailabilityPage;
 
 public class SelectConsularDate implements Interaction {
     public static boolean isDate;
-    int cont = 1;
+    int cont;
 
+    public SelectConsularDate() {
+        cont = 1;
+    }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
@@ -18,7 +21,7 @@ public class SelectConsularDate implements Interaction {
                     Click.on(AppointmentsAvailabilityPage.BTN_NEXT_MONTHS)
             );
 
-           /* if (AppointmentsAvailabilityPage.BTN_CONSULAR_APPOINTMENT_DATE.isVisibleFor(actor)) {
+            if (AppointmentsAvailabilityPage.BTN_CONSULAR_APPOINTMENT_DATE.isVisibleFor(actor)) {
                 actor.attemptsTo(
                         Click.on(AppointmentsAvailabilityPage.BTN_CONSULAR_APPOINTMENT_DATE)
                 );
@@ -26,10 +29,10 @@ public class SelectConsularDate implements Interaction {
                 break;
             } else {
                 this.isDate = false;
-            }*/
+            }
             cont = cont + 1;
         }
-        while (cont <= 20);
+        while (cont <= 5);
 
 
     }
